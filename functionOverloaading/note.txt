@@ -1,0 +1,10 @@
+Things to remember before using Function overloading
+Things to remember before using function overloading:
+
+Ensure that the functions have the same name but different parameters.
+Make sure the functions are in the same class or namespace.
+Consider the order and type of parameters when defining overloaded functions.
+Avoid ambiguous function overloads that could lead to compiler errors.
+Understand that function overloading is resolved at compile time based on the parameters used.
+Kotlin’s function overloading feature empowers developers with the ability to define multiple functions with the same name,
+ but different parameter lists, offering improved code readability, reusability, and flexibility.
