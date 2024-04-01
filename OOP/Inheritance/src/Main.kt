@@ -1,26 +1,25 @@
 fun main() {
-    println("Hello World!")
+    val car = Car("voxy","red",2,1)
+    val plane = Plane("boeing","red",1,4)
+    car.name
+    car.color
+    car.move()
+    car.stop()
+    plane.move()
+    plane.stop()
 }
-open class Vehicle(var name: String,var color: String){
-
-    class  Car(name: String,color: String, val doors: Int){
-        fun move(){
-            println("$name is mivng")
-        }
-        fun  stop(){
-            println("$name is stoped")
-        }
-    }
-    class  plane(name: String,color: String, val engines: Int): Vehicle(name, color){
-        fun move(){
-            println("$name is mivng")
-        }
-        fun  stop(){
-            println("$name is stoped")
-        }
+open class Vehicle(val name: String,val color: String) {
+    fun move() {
+        println("$name is moving")
     }
 
+    fun stop() {
+        println("$name is stopped")
+    }
 }
+
+class  Plane(name: String,color: String,val doors: Int,  val engines: Int): Vehicle(name, color){}
+class Car(name: String,color: String, val doors: Int, val engines: Int): Vehicle(name, color){}
 
 
 
